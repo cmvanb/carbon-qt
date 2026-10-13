@@ -1,0 +1,118 @@
+/*
+ Carbon Qt stylesheet, layered over Fusion and the carbon palette.
+ Shapes follow carbon-gtk: flat surfaces, hairline borders, rounded rows.
+*/
+<%
+    # Overlays tint whatever surface they sit on, including qutebrowser's prompt.
+    hover = color_css_rgba('text_15', 0.08)
+    handle = color_css_rgba('text_15', 0.28)
+    handle_hover = color_css_rgba('text_15', 0.5)
+%>
+QMenu {
+    background-color: ${color_hash('gtk_popover_bg')};
+    color: ${color_hash('gtk_popover_fg')};
+    border: 1px solid ${color_hash('secondary_6')};
+    padding: 4px;
+}
+
+QMenu::item {
+    background-color: transparent;
+    padding: 6px 28px 6px 12px;
+    border-radius: 4px;
+}
+
+QMenu::icon {
+    padding-left: 10px;
+}
+
+QMenu::item:selected {
+    background-color: ${color_hash('menu_selection_bg')};
+    color: ${color_hash('menu_selection_fg')};
+}
+
+QMenu::item:disabled {
+    color: ${color_hash('text_6')};
+}
+
+QMenu::separator {
+    height: 1px;
+    margin: 4px 8px;
+    background-color: ${color_hash('secondary_5')};
+}
+
+QToolTip {
+    background-color: ${color_hash('gtk_popover_bg')};
+    color: ${color_hash('gtk_popover_fg')};
+    border: 1px solid ${color_hash('secondary_6')};
+    padding: 4px 6px;
+}
+
+QAbstractItemView::item {
+    padding: 3px 0;
+}
+
+QAbstractItemView::item:hover {
+    background-color: ${hover};
+}
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    background: transparent;
+    border: none;
+    margin: 0;
+}
+
+QScrollBar:vertical { width: 10px; }
+QScrollBar:horizontal { height: 10px; }
+
+QScrollBar::handle {
+    background-color: ${handle};
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-clip: padding;
+}
+
+QScrollBar::handle:hover {
+    background-color: ${handle_hover};
+}
+
+QScrollBar::handle:vertical { min-height: 32px; }
+QScrollBar::handle:horizontal { min-width: 32px; }
+
+QScrollBar::add-line, QScrollBar::sub-line,
+QScrollBar::add-page, QScrollBar::sub-page {
+    background: none;
+    border: none;
+    width: 0;
+    height: 0;
+}
+
+QPushButton {
+    background-color: ${color_hash('gtk_headerbar_bg')};
+    color: ${color_hash('gtk_window_fg')};
+    border: 1px solid ${color_hash('secondary_6')};
+    border-radius: 4px;
+    padding: 5px 16px;
+}
+
+QPushButton:hover {
+    background-color: ${color_hash('secondary_5')};
+}
+
+QPushButton:pressed, QPushButton:checked {
+    background-color: ${color_hash('secondary_6')};
+}
+
+QPushButton:default {
+    background-color: ${color_hash('gtk_accent_bg')};
+    color: ${color_hash('gtk_accent_fg')};
+    border-color: ${color_hash('gtk_accent_bg')};
+}
+
+QPushButton:disabled {
+    color: ${color_hash('text_6')};
+}
+
+QLineEdit, QPlainTextEdit, QTextEdit {
+    selection-background-color: ${color_hash('selection_bg')};
+    selection-color: ${color_hash('selection_fg')};
+}

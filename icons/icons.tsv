@@ -1,0 +1,31 @@
+# Icons Win11 lacks, or ships only as white tray art that vanishes on light
+# surfaces. Sources under Win11/ resolve against /usr/share/icons, others
+# against this directory. Every source is recolored to the variant's ink.
+#
+# name	context	source
+audio-volume-high	status	Win11/actions/24/audio-volume-high.svg
+audio-volume-low	status	Win11/actions/24/audio-volume-low.svg
+audio-volume-medium	status	Win11/actions/24/audio-volume-medium.svg
+audio-volume-muted	status	Win11/actions/16/audio-volume-muted.svg
+battery-low	status	Win11/status/16/battery-low.svg
+document-page-setup	actions	src/document-page-setup.svg
+input-keyboard	devices	Win11/devices/16/input-keyboard.svg
+media-tape	devices	src/media-tape.svg
+network-offline	status	Win11/status/16/network-offline.svg
+network-wired	devices	Win11/devices/16/network-wired.svg
+security-high	status	Win11/status/16/security-high.svg
+security-low	status	Win11/status/16/security-low.svg
+sync-error	status	src/sync-error.svg
+sync-synchronizing	status	src/sync-synchronizing.svg
+system-lock-screen	actions	Win11/actions/16/system-lock-screen.svg
+system-log-out	actions	Win11/actions/16/system-log-out.svg
+system-reboot	actions	Win11/actions/16/system-reboot.svg
+system-shutdown	actions	Win11/actions/24/system-shutdown.svg
+weather-clear	status	Win11/status/16/weather-clear.svg
+weather-clear-night	status	Win11/status/16/weather-clear-night.svg
+weather-few-clouds	status	Win11/status/16/weather-few-clouds.svg
+weather-few-clouds-night	status	Win11/status/16/weather-few-clouds-night.svg
+weather-fog	status	Win11/status/16/weather-fog.svg
+weather-showers	status	Win11/status/16/weather-showers.svg
+weather-snow	status	Win11/status/16/weather-snow.svg
+weather-storm	status	Win11/status/16/weather-storm.svg
